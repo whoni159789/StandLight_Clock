@@ -37,9 +37,9 @@ int main()
      while (1)
      {
         listener.checkEvent();
+        view.backlightView();
         view.lightView();
         view.lcdView();
-        view.backlightView();
         delay(50);
      }
 
