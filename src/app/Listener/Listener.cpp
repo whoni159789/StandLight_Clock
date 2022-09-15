@@ -20,7 +20,7 @@ void Listener::checkEvent()
     }
     if(backlightButton->getState() == RELEASE_ACTIVE)
     {
-        controller->updateEvent("backlightButton");
+        controller->updateEvent("powerButton");
     }
     if(clockcheck->isUpdate())
     {

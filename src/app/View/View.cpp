@@ -58,36 +58,6 @@ void View::lightView()
      }
 }
 
-void View::lcdView()
-{
-    switch(lightState)
-    {
-        case LIGHT_OFF:
-            lightOff_lcd();
-            break;
-
-        case LIGHT_1:
-            lightOn1_lcd();
-            break;
-
-        case LIGHT_2:
-            lightOn2_lcd();
-            break;
-
-        case LIGHT_3:
-            lightOn3_lcd();
-            break;
-
-        case LIGHT_4:
-            lightOn4_lcd();
-            break;
-
-        case LIGHT_5:
-            lightOn5_lcd();
-            break;
-     }
-}
-
 void View::backlightView()
 {
     switch(backlightState)
@@ -104,6 +74,10 @@ void View::backlightView()
 
 void View::lightOff()
 {
+    char buff[30];
+    sprintf(buff, "Light Bright : 0");
+    light_lcd->WriteStringXY(0, 0, buff);
+
     light1->Off();
     light2->Off();
     light3->Off();
@@ -113,6 +87,10 @@ void View::lightOff()
 
 void View::lightOn1()
 {
+    char buff[30];
+    sprintf(buff, "Light Bright : 1");
+    light_lcd->WriteStringXY(0, 0, buff);
+
     light1->On();
     light2->Off();
     light3->Off();
@@ -122,6 +100,10 @@ void View::lightOn1()
 
 void View::lightOn2()
 {
+    char buff[30];
+    sprintf(buff, "Light Bright : 2");
+    light_lcd->WriteStringXY(0, 0, buff);
+
     light1->On();
     light2->On();
     light3->Off();
@@ -131,6 +113,10 @@ void View::lightOn2()
 
 void View::lightOn3()
 {
+    char buff[30];
+    sprintf(buff, "Light Bright : 3");
+    light_lcd->WriteStringXY(0, 0, buff);
+
     light1->On();
     light2->On();
     light3->On();
@@ -140,6 +126,10 @@ void View::lightOn3()
 
 void View::lightOn4()
 {
+    char buff[30];
+    sprintf(buff, "Light Bright : 4");
+    light_lcd->WriteStringXY(0, 0, buff);
+
     light1->On();
     light2->On();
     light3->On();
@@ -149,6 +139,10 @@ void View::lightOn4()
 
 void View::lightOn5()
 {
+    char buff[30];
+    sprintf(buff, "Light Bright : 5");
+    light_lcd->WriteStringXY(0, 0, buff);
+
     light1->On();
     light2->On();
     light3->On();
@@ -156,34 +150,6 @@ void View::lightOn5()
     light5->On();
 }
 
-void View::lightOff_lcd()
-{
-    light_lcd->WriteStringXY(0, 0, "LED Power OFF   ");   
-}
-
-void View::lightOn1_lcd()
-{
-    light_lcd->WriteStringXY(0, 0, "LED First Stage ");
-}
-
-void View::lightOn2_lcd()
-{
-    light_lcd->WriteStringXY(0, 0, "LED Second Stage");
-}
-
-void View::lightOn3_lcd()
-{
-    light_lcd->WriteStringXY(0, 0, "LED Third Stage ");
-}
-void View::lightOn4_lcd()
-{
-    light_lcd->WriteStringXY(0, 0, "LED Fourth Stage");
-}
-
-void View::lightOn5_lcd()
-{
-    light_lcd->WriteStringXY(0, 0, "LED Fifth Stage ");
-}
 
 void View::backlightOff()
 {

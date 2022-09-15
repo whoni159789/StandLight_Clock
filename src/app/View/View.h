@@ -33,14 +33,6 @@ public:
     void lightOn4();
     void lightOn5();
 
-    void lcdView();
-    void lightOff_lcd();
-    void lightOn1_lcd();
-    void lightOn2_lcd();
-    void lightOn3_lcd();
-    void lightOn4_lcd();
-    void lightOn5_lcd();
-
     void backlightsetState(int state);
     void backlightView();
     void backlightOff();

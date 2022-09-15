@@ -17,9 +17,9 @@ void Controller::updateEvent(std::string strBtn)
         service->updateState("modeButton");
     }
     
-    if(strBtn == "backlightButton")
+    if(strBtn == "powerButton")
     {
-        service->updateState("backlightButton");
+        service->updateState("powerButton");
     }
 
     if(strBtn == "clockUpdate")

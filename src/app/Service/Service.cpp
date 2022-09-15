@@ -68,7 +68,7 @@ void Service::updateState(std::string strState)
     switch(backlightState)
     {
         case BACKLIGHT_OFF:
-            if(strState == "backlightButton")
+            if(strState == "powerButton")
             {
                 backlightState = BACKLIGHT_ON;
                 view->backlightsetState(backlightState);
@@ -76,7 +76,7 @@ void Service::updateState(std::string strState)
         break;
 
         case BACKLIGHT_ON:
-            if(strState == "backlightButton")
+            if(strState == "powerButton")
             {
                 backlightState = BACKLIGHT_OFF;
                 view->backlightsetState(backlightState);

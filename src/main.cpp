@@ -39,7 +39,6 @@ int main()
         listener.checkEvent();
         view.backlightView();
         view.lightView();
-        view.lcdView();
         delay(50);
      }
 
